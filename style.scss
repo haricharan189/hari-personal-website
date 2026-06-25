@@ -13,25 +13,23 @@
 /* BASE RULES */
 /**************/
 a {
-  color: #1772d0;
+  color: #1266b0;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #b54b1b;
   text-decoration: none;
 }
 
 body,
-td,
-th,
-tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-display: auto;
+  line-height: 1.5;
 }
 
 strong {
@@ -46,8 +44,8 @@ h2 {
   font-display: auto;
   font-weight: normal;
   padding: 0px;
-  margin: 0px;
-  display:inline; 
+  margin: 0 0 16px;
+  display:block;
 }
 
 h3 {
@@ -57,7 +55,7 @@ h3 {
   font-display: auto;
   padding: 0px;
   margin: 0px;
-  display:inline; 
+  display:block;
 }
 
 h1 {
@@ -72,6 +70,99 @@ h1 {
   margin-left: 0px;
   margin-right: 0px;
 
+}
+
+body {
+  margin: 0;
+  color: #222;
+  background: #fff;
+}
+
+.page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 20px 36px;
+  box-sizing: border-box;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 28px;
+  align-items: center;
+  padding: 8px 0 28px;
+}
+
+.intro-text h1 {
+  text-align: center;
+}
+
+.intro-photo img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.links {
+  text-align: center;
+}
+
+section {
+  padding: 24px 0 8px;
+}
+
+.entry {
+  margin: 0 0 22px;
+}
+
+.entry p {
+  margin: 6px 0 0;
+}
+
+.meta {
+  color: #666;
+  font-size: 13px;
+}
+
+.timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.item p {
+  margin: 4px 0 0;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.training-grid p {
+  margin: 4px 0 0;
+}
+
+footer {
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+}
+
+footer a {
+  font-size: 12px;
 }
 
 .one {
@@ -97,6 +188,35 @@ h1 {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 18px 16px 30px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .intro-photo {
+    order: -1;
+  }
+
+  .intro-photo img {
+    max-width: 180px;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .training-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
