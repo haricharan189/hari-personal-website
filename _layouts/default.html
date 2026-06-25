@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>{{ site.name }}</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta name="author" content="{{ site.name }}">
   <meta name="description" content="{{ site.description }}">
@@ -14,140 +14,14 @@
 
 <body>
   <main class="page">
-    <section class="intro">
-      <div class="intro-text">
-        <h1>Haricharana S</h1>
-        <p>
-          I work at the intersection of AI security, application security, and applied NLP. At
-          <a href="https://www.we45.com/">we45</a>, I build AI-native security systems that help teams review
-          architectures, model threats, and put guardrails around AI-assisted development.
-        </p>
-        <p>
-          My research has focused on knowledge-graph question answering, long-context LLM evaluation, and legal
-          argument reasoning. I studied Chemical Engineering at the
-          <a href="https://www.nitk.ac.in/">National Institute of Technology Karnataka, Surathkal</a>, with a minor in
-          Management, and spent time as a research assistant at Georgia Tech and as a summer intern at IIT Kharagpur.
-        </p>
-        <p class="links">
-          <a href="mailto:sharicharana@gmail.com">Email</a> /
-          <a href="https://github.com/haricharan189">GitHub</a> /
-          <a href="https://www.linkedin.com/in/haricharana-s">LinkedIn</a>
-        </p>
-      </div>
-      <div class="intro-photo">
-        <img alt="Haricharana S" src="{{ site.baseurl }}/images/haricharana-s.jpeg">
-      </div>
-    </section>
+    <nav>
+      <a class="{% if page.nav == 'home' %}active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+      <a class="{% if page.nav == 'research' %}active{% endif %}" href="{{ site.baseurl }}/research/">Research</a>
+      <a class="{% if page.nav == 'projects' %}active{% endif %}" href="{{ site.baseurl }}/projects/">Projects</a>
+      <a class="{% if page.nav == 'training' %}active{% endif %}" href="{{ site.baseurl }}/training/">Training</a>
+    </nav>
 
-    <section>
-      <h2>Timeline</h2>
-      <div class="timeline">
-        <div class="item">
-          <div class="meta">2021 - 2025</div>
-          <div>
-            <h3>NITK Surathkal</h3>
-            <p>B.Tech. in Chemical Engineering with a minor in Management.</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="meta">Jun - Sep 2023</div>
-          <div>
-            <h3>IIT Kharagpur</h3>
-            <p>Worked on low-resource NLP for Sanskrit scriptures, including extractive question answering, Haystack pipelines, and transformer fine-tuning.</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="meta">2024 - present</div>
-          <div>
-            <h3>Georgia Tech, FSIL</h3>
-            <p>Developing KG-MuLQA, a knowledge-graph framework for multi-level QA extraction from long financial credit agreements.</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="meta">2024 - present</div>
-          <div>
-            <h3>we45</h3>
-            <p>Solutions Engineer building SecurityReview.ai, VibeReview, and AI-native security assessment workflows.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <div class="entry">
-        <h3><a href="https://www.securityreview.ai/">SecurityReview.ai</a></h3>
-        <p class="meta">Agentic AI, threat modeling, RAG, OSCAL</p>
-        <p>
-          SecurityReview.ai turns architecture documents, diagrams, tickets, code, and other engineering artifacts into
-          system-specific threat models, countermeasures, and compliance-ready review outputs. I architected core
-          workflows for multi-modal ingestion, code profiling, specialized review agents, PWNISMS category analysis,
-          threat-intelligence retrieval, and OSCAL-backed compliance mapping.
-        </p>
-      </div>
-      <div class="entry">
-        <h3>VibeReview</h3>
-        <p class="meta">AI coding guardrails, MCP, GitHub, GitLab, IDE workflows</p>
-        <p>
-          VibeReview is a SaaS guardrail platform for AI-assisted development. It profiles repositories, generates
-          threat-informed rules, and delivers them into developer workflows through MCP, GitHub, GitLab, and IDE
-          integrations so AI coding tools get security context before risky changes are made.
-        </p>
-      </div>
-      <div class="entry">
-        <h3>KG-MuLQA</h3>
-        <p class="meta">Knowledge graphs, long-context LLM evaluation, NLP</p>
-        <p>
-          KG-MuLQA builds document-level knowledge graphs from SEC credit agreements and generates multi-level QA
-          benchmarks that test relation hops, set operations, and answer plurality. The benchmark covers 20,139
-          questions over 170 credit agreements and is used to study long-context LLM failure modes.
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Publications</h2>
-      <div class="entry">
-        <h3>KG-MuLQA: A Framework for KG-based Multi-Level QA Extraction and Long-Context LLM Evaluation.</h3>
-        <p class="meta">The 64th Annual Meeting of the Association for Computational Linguistics, San Diego, 2026.</p>
-      </div>
-      <div class="entry">
-        <h3><a href="https://arxiv.org/abs/2403.13107">Towards Unsupervised Question Answering System with Multi-level Summarization for Legal Text.</a></h3>
-        <p class="meta">Proceedings of the 18th International Workshop on Semantic Evaluation, NAACL, Mexico City, 2024.</p>
-        <p>
-          Team SCaLAR's SemEval-2024 Task 5 system used similarity-based unsupervised labeling, multi-level Legal-BERT
-          fusion, and T5 segment-wise summarization for legal argument reasoning in civil procedure.
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Training</h2>
-      <div class="entry">
-        <h3><a href="https://www.appsecengineer.com/bootcamps/appsecengineer-tm-certified-ai-security-engineer">AppSecEngineer Certified AI Agent Security Professional</a></h3>
-        <p>
-          Conducted a live AI security bootcamp covering LLM and RAG foundations, OWASP Top 10 for LLMs, prompt
-          injection, tool manipulation, poisoning attacks, MCP server security, and reinforcement-learning agent risks.
-        </p>
-      </div>
-      <div class="training-grid">
-        <div>
-          <h3>Black Hat USA</h3>
-          <p class="meta">August 2026</p>
-          <p>AI security and agentic application security training.</p>
-        </div>
-        <div>
-          <h3>CODE BLUE Japan</h3>
-          <p class="meta">November 2026</p>
-          <p>AI security training for practitioners in Japan.</p>
-        </div>
-        <div>
-          <h3>Black Hat Europe, London</h3>
-          <p class="meta">December 2026</p>
-          <p>AI security and agentic application security training.</p>
-        </div>
-      </div>
-    </section>
+    {{ content }}
 
     <footer>
       Design adapted from <a href="https://jonbarron.info/">Jon Barron's website</a>.

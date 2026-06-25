@@ -1,0 +1,88 @@
+---
+layout: default
+title: Projects
+nav: projects
+permalink: /projects/
+---
+
+<section>
+  <h1>Projects</h1>
+  <p>
+    I work as a platform architect on AI-native security products at <a href="https://www.we45.com/">we45</a>. My
+    projects sit between security engineering, LLM systems, developer experience, and product architecture: the goal is
+    to make security review workflows feel native to how teams already design, build, and ship software.
+  </p>
+</section>
+
+<section>
+  <article class="project">
+    <div class="project-header">
+      <div>
+        <h2><a href="https://www.securityreview.ai/">SecurityReview.ai</a></h2>
+        <p class="meta">Platform architect - Agentic AI, threat modeling, RAG, OSCAL, compliance mapping</p>
+      </div>
+      <a class="project-link" href="https://www.securityreview.ai/">securityreview.ai</a>
+    </div>
+    <p>
+      SecurityReview.ai is an AI-native security architecture review platform. It converts architecture documents,
+      diagrams, tickets, code, and engineering notes into system-specific threat models, countermeasures, and
+      compliance-ready reports. My role has focused on the platform architecture: shaping how messy engineering context
+      becomes structured security ground truth, how specialized agents reason over it, and how the output stays useful
+      for both security teams and builders.
+    </p>
+    <div class="project-grid">
+      <div>
+        <h3>Technical Architecture</h3>
+        <ul>
+          <li>Designed multi-modal ingestion for PDFs, diagrams, markdown, JSON, voice notes, and code artifacts.</li>
+          <li>Built code-profiling workflows with agents for architecture, APIs, data stores, dependencies, IaC, and existing controls.</li>
+          <li>Architected an agentic threat-modeling harness using category-specific reasoning, live threat intelligence, and implementation-aware countermeasures.</li>
+          <li>Mapped findings into OSCAL-backed compliance structures so reports connect engineering evidence to framework subsections.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Product Experience</h3>
+        <ul>
+          <li>Focused the workflow around how teams actually review systems: upload context, inspect assumptions, refine scope, and generate review artifacts.</li>
+          <li>Balanced security depth with legibility so outputs work for architects, application security engineers, and product teams.</li>
+          <li>Designed review outputs to move from abstract risks to concrete implementation guidance and defensible compliance evidence.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <article class="project">
+    <div class="project-header">
+      <div>
+        <h2><a href="https://vibereview.app/">VibeReview</a></h2>
+        <p class="meta">Platform architect - AI coding guardrails, MCP, GitHub, GitLab, IDE workflows</p>
+      </div>
+      <a class="project-link" href="https://vibereview.app/">vibereview.app</a>
+    </div>
+    <p>
+      VibeReview is a guardrail platform for AI-assisted development. It profiles repositories, generates
+      threat-informed rules, and delivers that guidance into the tools where AI coding happens: IDEs, pull requests,
+      MCP-enabled workflows, GitHub, and GitLab. The product is built around a simple idea: AI coding assistants should
+      understand the security shape of the system before they suggest changes.
+    </p>
+    <div class="project-grid">
+      <div>
+        <h3>Technical Architecture</h3>
+        <ul>
+          <li>Architected repository profiling that extracts compact system context from code, dependencies, APIs, data flows, and existing security controls.</li>
+          <li>Designed rule-generation workflows that translate system profiles into practical, threat-informed guardrails for AI coding tools.</li>
+          <li>Built integration patterns for MCP, GitHub, GitLab, and IDE delivery so guidance can appear close to the developer's change loop.</li>
+          <li>Focused on keeping guardrails specific to the repository instead of relying on generic secure-coding checklists.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Product Experience</h3>
+        <ul>
+          <li>Designed the platform around developer ergonomics: low-friction onboarding, understandable rules, and review guidance that fits PR workflows.</li>
+          <li>Connected security architecture context to day-to-day coding decisions, especially when developers are using AI agents or copilots.</li>
+          <li>Shaped VibeReview as a bridge between application security intent and the fast, iterative style of AI-assisted software development.</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</section>
