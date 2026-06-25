@@ -245,8 +245,8 @@ section {
 
 .training-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 22px;
 }
 
 .training-grid p {
